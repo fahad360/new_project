@@ -21,7 +21,10 @@ class StartupView extends StackedView<StartupViewModel> {
           children: [
             Text(
               'eCommerce',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900, color: Colors.purple),
+              style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.purple),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,

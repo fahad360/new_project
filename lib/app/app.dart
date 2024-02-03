@@ -12,6 +12,9 @@ import 'package:new_project/ui/views/product/product_view.dart';
 import 'package:new_project/ui/views/edit_profile/edit_profile_view.dart';
 import 'package:new_project/ui/views/setting/setting_view.dart';
 import 'package:new_project/ui/views/navbar/navbar_view.dart';
+import 'package:new_project/services/api_service.dart';
+import 'package:new_project/services/user_service.dart';
+import 'package:new_project/services/auth_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -32,7 +35,10 @@ import 'package:new_project/ui/views/navbar/navbar_view.dart';
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
-    // @stacked-service
+    LazySingleton(classType: ApiService),
+    LazySingleton(classType: UserService),
+    LazySingleton(classType: AuthService),
+// @stacked-service
   ],
   bottomsheets: [
     StackedBottomsheet(classType: NoticeSheet),

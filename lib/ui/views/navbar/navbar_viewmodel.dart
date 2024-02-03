@@ -15,7 +15,7 @@ class NavbarViewModel extends BaseViewModel {
       _navigationService.replaceWithProductView();
     } else if (newIndex == 2) {
       _navigationService.replaceWithEditProfileView();
-    }else if (newIndex == 3) {
+    } else if (newIndex == 3) {
       _navigationService.replaceWithSettingView();
     }
     notifyListeners();

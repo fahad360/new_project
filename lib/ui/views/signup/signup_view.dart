@@ -15,6 +15,8 @@ class SignupView extends StackedView<SignupViewModel> {
 
   final _formKey = GlobalKey<FormState>();
 
+  
+
   @override
   Widget builder(
     BuildContext context,
@@ -22,7 +24,8 @@ class SignupView extends StackedView<SignupViewModel> {
     Widget? child,
   ) {
     var size = MediaQuery.of(context).size;
-    return Scaffold(
+    return ViewModelBuilder<SignupViewModel>.reactive(
+      builder: (context, viewModel, child) => Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
         child: SafeArea(
@@ -142,7 +145,7 @@ class SignupView extends StackedView<SignupViewModel> {
           ),
         ),
       ),
-    );
+    ), viewModelBuilder: () => SignupViewModel() );
   }
 
   Widget registerTitleButtons({Size? size, SignupViewModel? viewmodel}) {

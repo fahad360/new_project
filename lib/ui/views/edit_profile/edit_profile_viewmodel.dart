@@ -25,19 +25,10 @@ class EditProfileViewModel extends BaseViewModel {
     setBusy(true);
     //TODO: Implement Functionality
     _navigationService.replaceWithProductListView();
-    // try {
-    //   await _userService.updateUserProfile(
-    //     firstName: firstNameController!.text,
-    //     lastName: lastNameController!.text,
-    //   );
-    //   await navigateToCreatePinView();
-    // } catch (e) {
-    //   _utilityService.showErrorBar(context!, e.toString());
-    // }
     setBusy(false);
   }
 
-   void goBack() {
+  void goBack() {
     _navigationService.replaceWithProductListView();
   }
 
@@ -83,5 +74,4 @@ class EditProfileViewModel extends BaseViewModel {
           );
         });
   }
-
 }

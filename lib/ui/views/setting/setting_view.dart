@@ -48,7 +48,7 @@ class SettingView extends StackedView<SettingViewModel> {
                   fontWeight: FontWeight.w300),
             ),
             usersInfo(
-              imageUrl: "model.user!.imageUrl",
+              imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDRlp-KGr_M94k_oor4Odjn2UzbAS7n1YoA&usqp=CAU",
               title: 'viewModel',
               emailId: "model.user!.email",
               context: context,
