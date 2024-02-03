@@ -18,6 +18,5 @@ class ProductListViewModel extends BaseViewModel {
 
   Future navigateToProductDetail() async {
     _navigationService.replaceWithProductView();
-    print("Button pressed");
   }
 }

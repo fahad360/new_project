@@ -9,6 +9,7 @@ import 'package:new_project/ui/views/signup/signup_view.dart';
 import 'package:new_project/ui/views/set_profile/set_profile_view.dart';
 import 'package:new_project/ui/views/product_list/product_list_view.dart';
 import 'package:new_project/ui/views/product/product_view.dart';
+import 'package:new_project/ui/views/edit_profile/edit_profile_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -20,6 +21,7 @@ import 'package:new_project/ui/views/product/product_view.dart';
     MaterialRoute(page: SetProfileView),
     MaterialRoute(page: ProductListView),
     MaterialRoute(page: ProductView),
+    MaterialRoute(page: EditProfileView),
 // @stacked-route
   ],
   dependencies: [

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:new_project/theme/styles.dart';
@@ -18,19 +16,6 @@ class ProductView extends StackedView<ProductViewModel> {
   ) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      // backgroundColor: Theme.of(context).colorScheme.background,
-      // appBar: PreferredSize(
-      //   preferredSize: const Size.fromHeight(100),
-      //   child: appbarWidget(
-      //     onTap: () {
-      //       // viewModel.selectRole();
-      //     },
-      //     size: size,
-      //     context: context,
-      //     title: 'Our Products',
-      //     color: MyStyles.themeData().primaryColor,
-      //   ),
-      // ),
       body: SafeArea(
         child: Stack(
           children: [
