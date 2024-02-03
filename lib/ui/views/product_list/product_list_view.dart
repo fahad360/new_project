@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:new_project/theme/styles.dart';
-import 'package:new_project/widgets/custom_listtile_widget.dart';
 import 'package:new_project/widgets/main_appbar.dart';
 import 'package:stacked/stacked.dart';
 
@@ -26,7 +25,7 @@ class ProductListView extends StackedView<ProductListViewModel> {
           },
           size: size,
           context: context,
-          title: 'Our Products',
+          title: 'Product Detail',
           color: MyStyles.themeData().primaryColor,
         ),
       ),
@@ -37,31 +36,24 @@ class ProductListView extends StackedView<ProductListViewModel> {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () {
-                    viewModel.navigateToProductDetail();
-                  },
-                  child: CustomListTile(
-                    height: 90,
-                    leading: Container(
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: NetworkImage(
-                            "https://i.pinimg.com/736x/25/a3/80/25a380a1939efa6f94d9d7b1ec623ee8.jpg",
-                          ),
-                        ),
-                      ),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  elevation: 8,
+                  // shadowColor: MyStyles.themeData().primaryColor,
+                  child: ListTile(
+                    leading: const CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://i.pinimg.com/736x/25/a3/80/25a380a1939efa6f94d9d7b1ec623ee8.jpg"),
+                      radius: 30,
                     ),
                     title: const Text(
                       "Product Name",
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                     ),
-                    subTitle: Text(
+                    subtitle: Text(
                       "\$3.50",
                       style: TextStyle(
                           color: MyStyles.themeData().primaryColor,
@@ -80,6 +72,9 @@ class ProductListView extends StackedView<ProductListViewModel> {
                         // viewModel.navigateToProductDetail();
                       },
                     ),
+                    onTap: () {
+                      viewModel.navigateToProductDetail();
+                    },
                   ),
                 ),
               );
