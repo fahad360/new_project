@@ -260,8 +260,8 @@ class EditProfileView extends StackedView<EditProfileViewModel> {
       },
       controller: controller,
       cursorColor: MyStyles.themeData().primaryColor,
-      decoration: inputDecoration(
-          context: context, hintText: 'Update your first name'),
+      decoration:
+          inputDecoration(context: context, hintText: 'Update your first name'),
     );
   }
 
@@ -303,8 +303,8 @@ class EditProfileView extends StackedView<EditProfileViewModel> {
       // },
       controller: controller,
       cursorColor: MyStyles.themeData().primaryColor,
-      decoration: inputDecoration(
-          context: context, hintText: 'Update your last name'),
+      decoration:
+          inputDecoration(context: context, hintText: 'Update your last name'),
     );
   }
 

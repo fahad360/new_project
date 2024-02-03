@@ -32,17 +32,17 @@ class ProductView extends StackedView<ProductViewModel> {
               //     "https://img.freepik.com/free-photo/macaroni-noodles-with-meat-tomato-sauce-served-plate-table_1220-6904.jpg"),
             ),
             // buttonArrow(context),
-            scroll(),
+            scroll(size, viewModel),
           ],
         ),
       ),
     );
   }
 
-  scroll() {
+  scroll(Size size, ProductViewModel viewModel) {
     return DraggableScrollableSheet(
         initialChildSize: 0.6,
-        maxChildSize: 0.7,
+        maxChildSize: 0.8,
         minChildSize: 0.6,
         builder: (context, scrollController) {
           return Container(
@@ -188,6 +188,38 @@ class ProductView extends StackedView<ProductViewModel> {
                     padding: EdgeInsets.symmetric(vertical: 15),
                     child: Divider(
                       height: 4,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      viewModel.goBack();
+                    },
+                    child: Container(
+                      height: size.height * 0.080,
+                      width: size.width,
+                      // margin:
+                      //     const EdgeInsets.only(left: 20, right: 20),
+                      padding: const EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: MyStyles.themeMode().buttonGradient!,
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Add to Cart',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.ubuntu(
+                            fontSize: size.height * 0.028,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],

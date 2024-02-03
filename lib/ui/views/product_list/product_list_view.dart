@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_project/theme/styles.dart';
+import 'package:new_project/ui/views/navbar/navbar_view.dart';
 import 'package:new_project/widgets/main_appbar.dart';
 import 'package:stacked/stacked.dart';
 
@@ -80,6 +81,7 @@ class ProductListView extends StackedView<ProductListViewModel> {
               );
             }),
       ),
+      bottomNavigationBar: const NavbarView(),
     );
   }
 

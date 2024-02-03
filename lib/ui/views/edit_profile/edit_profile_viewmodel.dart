@@ -7,7 +7,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class EditProfileViewModel extends BaseViewModel {
-   final _navigationService = locator<NavigationService>();
+  final _navigationService = locator<NavigationService>();
 
   File? _selectedImage;
   File? get selectedImage => _selectedImage;
@@ -35,6 +35,10 @@ class EditProfileViewModel extends BaseViewModel {
     //   _utilityService.showErrorBar(context!, e.toString());
     // }
     setBusy(false);
+  }
+
+   void goBack() {
+    _navigationService.replaceWithProductListView();
   }
 
   Future navigateToHomeView() async {
@@ -80,7 +84,4 @@ class EditProfileViewModel extends BaseViewModel {
         });
   }
 
-  goBack() {
-    _navigationService.back();
-  }
 }
