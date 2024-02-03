@@ -143,7 +143,6 @@ class SignupView extends StackedView<SignupViewModel> {
         ),
       ),
     );
-  
   }
 
   Widget registerTitleButtons({Size? size, SignupViewModel? viewmodel}) {

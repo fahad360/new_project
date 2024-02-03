@@ -15,7 +15,6 @@ class LoginViewModel extends BaseViewModel {
 
   BuildContext? context;
 
-
   Future navigateToSignupView() async {
     _navigationService.replaceWithSignupView();
   }

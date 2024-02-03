@@ -6,6 +6,9 @@ import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:new_project/ui/views/login/login_view.dart';
 import 'package:new_project/ui/views/signup/signup_view.dart';
+import 'package:new_project/ui/views/set_profile/set_profile_view.dart';
+import 'package:new_project/ui/views/product_list/product_list_view.dart';
+import 'package:new_project/ui/views/product/product_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -14,6 +17,9 @@ import 'package:new_project/ui/views/signup/signup_view.dart';
     MaterialRoute(page: StartupView),
     MaterialRoute(page: LoginView),
     MaterialRoute(page: SignupView),
+    MaterialRoute(page: SetProfileView),
+    MaterialRoute(page: ProductListView),
+    MaterialRoute(page: ProductView),
 // @stacked-route
   ],
   dependencies: [
