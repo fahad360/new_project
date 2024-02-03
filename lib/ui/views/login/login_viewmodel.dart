@@ -21,6 +21,7 @@ class LoginViewModel extends BaseViewModel {
 
   Future<void> loginUserAndNavigate() async {
     setBusy(true);
+    _navigationService.replaceWithSetProfileView();
     // try {
     //   var userStatus = await _authService.loginUserWithEmailPassword(
     //     email: emailController!.text,

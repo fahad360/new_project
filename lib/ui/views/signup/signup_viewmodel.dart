@@ -23,8 +23,9 @@ class SignupViewModel extends BaseViewModel {
   }
 
   Future<void> registerUserAndNavigate() async {
-    _authService.registerUserWithEmailPassword(
-        email: emailController!.text, password: passwordController!.text);
+    _navigationService.replaceWithSetProfileView();
+    // _authService.registerUserWithEmailPassword(
+    //     email: emailController!.text, password: passwordController!.text);
   }
 
   void changeBool() {

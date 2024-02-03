@@ -23,7 +23,6 @@ class SetProfileViewModel extends BaseViewModel {
 
   Future<void> saveUserProfileAndNavigate() async {
     setBusy(true);
-    //TODO: Implement Functionality
     _navigationService.replaceWithProductListView();
     // try {
     //   await _userService.updateUserProfile(
