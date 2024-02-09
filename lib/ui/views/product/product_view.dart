@@ -96,7 +96,7 @@ class ProductView extends StackedView<ProductViewModel> {
                     children: [
                       InkWell(
                         onTap: () {
-                          // TODO: Implement
+                          
                         },
                         child: const CircleAvatar(
                           radius: 25,
